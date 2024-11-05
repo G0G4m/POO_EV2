@@ -3,7 +3,6 @@ import m_logic.exit_terminal as xt
 import tkinter as tk
 from tkinter import ttk
 import sys
-from m_fn.sf.terminal import terminal_text as tt
 from m_fn.sf.treeview import treeview as tv
 from m_fn.sf.placeholder import placeholder
 
@@ -119,7 +118,5 @@ class tab_registro_tiempo(tk.Frame):
         tree.column("Fecha registro",width=100,anchor=tk.CENTER)
         tree.column("Horas trabajadas",width=100,anchor=tk.CENTER)
         tree.column("Trabajo realizado",width=110,anchor=tk.CENTER)
-
-        tt(subtab)
 
         tv(tree,rt.reg_tiempo.read_all())

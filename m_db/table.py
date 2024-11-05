@@ -1,7 +1,7 @@
 import sqlite3
 
 def create_table():
-    conn = sqlite3.connect("db_pr.db")
+    conn = sqlite3.connect(r"db\db_pr.db")
     c = conn.cursor()
     
     #Se crea la tabla departamento si no existe
@@ -61,6 +61,4 @@ def create_table():
               key_user TEXT
               )""")
     
-    c.execute("""INSERT INTO departamento(nombre_departamento) VALUES ("Recursos humanos")""")
-
     conn.commit()

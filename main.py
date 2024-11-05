@@ -1,4 +1,5 @@
 from m_db.table import create_table
+from m_fn.sf.terminal import terminal_text as tertex
 import tkinter as tk
 from tkinter import ttk
 from m_fn.aloof_1 import tab_home
@@ -8,8 +9,6 @@ from m_fn.aloof_4 import tab_empleado
 from m_fn.aloof_5 import tab_registro_tiempo
 
 def interfaz():
-    
-    create_table()
 
     root = tk.Tk()
     root.geometry("550x650")
@@ -31,6 +30,10 @@ def interfaz():
     #notebook.add(proyecto_tab, text = "Proyecto")
     notebook.add(registro_tab, text = "Registro Tiempo")
 
+    tertex(notebook)
+
     root.mainloop()
+
+create_table()
 
 interfaz()

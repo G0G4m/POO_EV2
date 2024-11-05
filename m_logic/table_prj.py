@@ -1,7 +1,7 @@
 from base_method import base_meth
 import sqlite3 as sql
 
-conn = sql.connect(database = "db\db_pr.db")
+conn = sql.connect(database = r"db\db_pr.db")
 c = conn.cursor()
 
 class proyecto(base_meth):
